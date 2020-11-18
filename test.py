@@ -51,7 +51,13 @@ def find_spotify():
     title = request.form["title"]
     feature_dict = Spotify.find_track(title)
     return ML_feature(feature_dict)
+@app.route("/data")
+def data():
+    return (render_template('data.html'))
 
+@app.route('/about')
+def about():
+    return (render_template('index.html'))
 
 if __name__ == '__main__':
     app.run()

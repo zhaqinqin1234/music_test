@@ -24,53 +24,50 @@
   <body id ="home">
    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Theme Music</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Visualizations
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="v1.html">Top 50 Global</a>
-                <a class="dropdown-item" href="v2.html">Top 50 US</a>
-                <a class="dropdown-item" href="v3.html">Most Popular</a>
-                <a class="dropdown-item" href="v4.html">Top 50 Previous Year</a>
-              </div>
+      <a class="navbar-brand" href="{{ url_for('index') }}">Theme Music</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('visu') }}">
+              Visualizations
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('aml') }}">AML Model</a>
             </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('run_app') }}">APP</a>
+          </li>
             <li class="nav-item">
-                <a class="nav-link" href="data.html">Data Source</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li> 
-          </ul>
-          <!-- social media -->
-        <ul class="social-icons">
-          <li>
-            <a href="https://www.facebook.com">
-              <i class="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-                    <li>
-            <a href="https://www.linkedin.com">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-         
+              <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+            </li> 
         </ul>
-        </div>
-      </nav>
+        <!-- social media -->
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.facebook.com">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+                  <li>
+          <a href="https://www.linkedin.com">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+       
+      </ul>
+      </div>
+    </nav>
 
 
   <div class="container">

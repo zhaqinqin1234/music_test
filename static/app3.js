@@ -98,6 +98,7 @@ const UIController = (function() {
             return {
                 genreid: document.getElementById(DOMElements.Genre),
                 playlist: document.getElementById(DOMElements.selectPlaylist),
+                tracks: document.querySelector(DOMElements.divSonglist),
                 submit: document.getElementById(DOMElements.buttonSubmit),
                 submit2: document.getElementById(DOMElements.Submit2),
                 songDetail: document.getElementById(DOMElements.divSongDetail),
@@ -112,39 +113,13 @@ const UIController = (function() {
             const html = `<a href="${id}" class="list-group-item list-group-item-action list-group-item-light" id="${id}">${name}</a>`;
             document.querySelector(DOMElements.divSonglist).insertAdjacentHTML('beforeend', html);
         },
-        createTrackDetail(img, title, artist) {
-
-            const detailDiv = document.getElementById(DOMElements.divSongDetail);
-            // any time user clicks a new song, we need to clear out the song detail div
-            detailDiv.innerHTML = '';
-
-            const html = 
-            `
-            <div class="row col-sm-12 px-0">
-                <img src="${img}" alt="">        
-            </div>
-            <div class="row col-sm-12 px-0">
-                <label for="Genre" class="form-label col-sm-12">${title}</label>
-            </div>
-            <div class="row col-sm-12 px-0">
-                <label for="artist" class="form-label col-sm-12">By ${artist}</label>
-            </div> 
-            `;
-
-            detailDiv.insertAdjacentHTML('beforeend', html)
-        },
-
-        resetTrackDetail() {
-            this.inputField().songDetail.innerHTML = '';
-        },
 
         resetPlaylist() {
             this.inputField().playlist.innerHTML = '';
-            this.resetTrackDetail();
+            this.resetTracks();
         },
         resetTracks() {
             this.inputField().tracks.innerHTML = '';
-            this.resetTrackDetail();
         },
 
         storeToken(value) {

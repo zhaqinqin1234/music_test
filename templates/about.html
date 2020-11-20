@@ -21,55 +21,53 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body id ="home">
+<body id ="home">
    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Quarantine Music</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Visualizations
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="v1.html">Top 50 Global</a>
-                <a class="dropdown-item" href="v2.html">Top 50 in May 2020</a>
-                <a class="dropdown-item" href="v3.html">Danceability Comparison 2019 vs 2020-May</a>
-              </div>
+      <a class="navbar-brand" href="{{ url_for('index') }}">Theme Music</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('visu') }}">
+              Visualizations
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('aml') }}">AML Model</a>
             </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('run_app') }}">APP</a>
+          </li>
             <li class="nav-item">
-                <a class="nav-link" href="data.html">Data Source</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li> 
-          </ul>
-          <!-- social media -->
-        <ul class="social-icons">
-          <li>
-            <a href="https://www.facebook.com">
-              <i class="fab fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-                    <li>
-            <a href="https://www.linkedin.com">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-         
+              <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+            </li> 
         </ul>
-        </div>
-      </nav>
+        <!-- social media -->
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.facebook.com">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+                  <li>
+          <a href="https://www.linkedin.com">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+       
+      </ul>
+      </div>
+    </nav>
 
 
       <header class="masthead">
@@ -91,27 +89,27 @@
             <div class = "row">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-light">
       
-                <img src="images/c.png" class="mr-2 float-left" style="width: 50px; height: 50px;">
+                <img src="../static/images/c.png" class="mr-2 float-left" style="width: 50px; height: 50px;">
                 <h4 class="text-success pt-2 pl-2 pr-2 pb-2">Celine Cai</h4>
                 <p>
                 Lorem ipsum dolor sit amet, diam civibus recteque id vis, mei ridens verterem incorrupte ei. Mel persius nominati electram eu, in tota solum dicunt ius, aliquam pertinacia cu mei. Ne augue regione oblique cum, vero alienum in quo, in habeo autem everti mea. Usu te ubique maiestatis, qui velit assentior an. Ei doctus labitur fuisset nec, nostro accusamus intellegat ea cum, et ius nisl errem aliquam. Usu consul honestatis definitionem ex, novum quidam eu duo, vis nisl argumentum in.  
                 </p>
                 <br>
                 <br>
-                <img src="images/b.png" class="mr-2 float-left" style="width: 50px; height: 50px;">
+                <img src="../static/images/b.png" class="mr-2 float-left" style="width: 50px; height: 50px;">
                 <h4 class="text-success pt-2 pl-2 pr-2 pb-2">Belinda Mapesa</h4>
                 <p>
                     Mel cibo munere impedit et. Sea accusata instructior ea. Falli liberavisse ex per, cu cum debet iracundia. Cum expetendis intellegam cu. Nihil maiorum comprehensam no quo, sea in omnis expetenda, eu modus epicurei eleifend eam.                </p>
                 <br>
                 <br>
-                <img src="images/q.png" class="mr-2 float-left" style="width: 50px; height: 50px;">
+                <img src="../static/images/q.png" class="mr-2 float-left" style="width: 50px; height: 50px;">
                 <h4 class="text-success pt-2 pl-2 pr-2 pb-2">Qinqin Zha</h4>
                 <p>
                     可 」 不稱讚 建章曰： 訖乃返 危德至 以測機 去 關雎 己轉身. 第七回 招」 第四回 第八回. 出 覽 誨 矣. 矣 出 危德至 」 訖乃返 意 分得意 樂而不淫 耳 後竊聽 關雎. 饒爾去罷」 也懊悔不了 此是後話 ，愈聽愈惱. ，愈聽愈惱 饒爾去罷」 也懊悔不了. 誨 關雎 」 耳. 」 關雎 覽 出 ，可 曰： 誨. 饒爾去罷」 矣 也懊悔不了 」 曰： 關雎 耳 ，愈聽愈惱 誨 覽 此是後話. 己轉身 危德至 不稱讚. 」 出 ，可 事 誨. 出 矣 去 」 事. 事 」 關雎 覽 意 耳. 事 意 」 誨 冒認收了 矣 出 ，可 玉，不題 覽 吉安而來 父親回衙. 此是後話 饒爾去罷」 也懊悔不了 ，愈聽愈惱. 吉安而來 父親回衙 汗流如雨. 分得意 樂而不淫 第十一回 建章曰： 不稱讚 訖乃返. 誨 意 出 ，可 曰： 耳. 」 耳 ，可 去.
                 </p>
                 <br>
                 <br>
-                <img src="images/unnamed.jpg" class="mr-2 float-left" style="width: 50px; height: 50px;">
+                <img src="../static/images/unnamed.jpg" class="mr-2 float-left" style="width: 50px; height: 50px;">
                 <h4 class="text-success pt-2 pl-2 pr-2 pb-2">Val Popovich</h4>
                 <p>
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
@@ -136,7 +134,7 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-<script type="text/javascript" src="static/js/features.js"
+<script type="text/javascript" src="static/js/features.js"></script>
     
 </body>
 

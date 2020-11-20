@@ -5,9 +5,12 @@ import Spotify
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/app')
+def run_app():
     
     return render_template('pyandjs.html')
 
@@ -32,8 +35,9 @@ def ML_feature():
     # return 'Result is %s <br/> <a href="/">Back Home</a>' % (track_result)
     # track_data["result"] = track_result
     return result_rec(track_result)
+
 @app.route('/result')
-def result_rec(result):
+def result_rec(result=None):
     return render_template('result.html',result=result)
 
 

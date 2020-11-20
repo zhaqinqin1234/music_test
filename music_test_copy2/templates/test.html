@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/test.css">
+        <title>
+            Track
+        </title>
+    </head>
+    <body>
+        <h3>
+            Any Track
+        </h3>
+        <p>
+            What type of the track<br>
+            Input track feature:<br>
+            <form action="/ML" method="post">
+                acousticness: <input type="text" name="acousticness"> 0 TO 1  <br />
+                danceability: <input type="text" name="danceability"> 0 TO 1 <br />
+                duration_ms: <input type="text" name="duration_ms">  <br />
+                energy: <input type="text" name="energy"> 0 TO 1 <br />
+                instrumentalness: <input type="text" name="instrumentalness"> 0 TO 1 <br />
+                key: <input type="text" name="key">  <br />
+                liveness: <input type="text" name="liveness"> 0 TO 1 <br />
+                loudness: <input type="text" name="loudness"> -14 TO 0 <br />
+                mode: <input type="text" name="mode"> 0 OR 1 <br />
+                speechiness: <input type="text" name="speechiness"> 0 TO 1 <br />
+                tempo: <input type="text" name="tempo">  <br />
+                time_signature: <input type="text" name="time_signature">  <br />
+                valence: <input type="text" name="valence" /> 0 TO 1 <br>
+                <input type="submit" name= "form" value="Submit" />
+            </form><hr>
+            Track Name: <br>
+            <form action="/find" method="post">
+                <input type='text' name = 'title'> 
+                <input type='submit' name = 'form' value = "Submit">
+            </form>
+        </p>
+        <h4>{{ result }}</h4>
+        <p>With features: <br>
+        </p>
+    </body>
+</html>

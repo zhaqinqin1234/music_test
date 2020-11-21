@@ -1,7 +1,7 @@
 const APIController = (function() {
     
-    const clientId = '';
-    const clientSecret = '';
+    const clientId = '5dc456ff92634a9ba8e2c8c22835781d';
+    const clientSecret = '2fc9f8197b7b49d98b01a3c9a59af875';
 
     // private methods
     const _getToken = async () => {

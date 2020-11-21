@@ -41,9 +41,9 @@ def result_rec(result=None):
     return render_template('result.html',result=result)
 
 
-@app.route("/data")
-def data():
-    return (render_template('data.html'))
+# @app.route("/data")
+# def data():
+#     return (render_template('data.html'))
 
 @app.route('/about')
 def about():
